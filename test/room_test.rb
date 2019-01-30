@@ -14,4 +14,8 @@ class RoomTest < Minitest::Test
     assert_equal 13, @room.width
   end
 
+  def test_room_area_is_length_times_width
+    assert_equal 130, @room.area
+  end
+
 end
