@@ -27,4 +27,8 @@ class House
     @rooms.sort { |room1, room2| room1.area <=> room2.area }
   end
 
+  def rooms_by_category
+    @rooms.group_by { |room| room.category }
+  end
+
 end
