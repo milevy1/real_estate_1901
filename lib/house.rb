@@ -15,4 +15,8 @@ class House
     @rooms.select { |room| room.category == category }
   end
 
+  def area
+    @rooms.reduce(0) { |x, room| x + room.area }
+  end
+
 end
