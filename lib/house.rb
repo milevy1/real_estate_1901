@@ -23,4 +23,8 @@ class House
     (@price.to_f / area).round(2)
   end
 
+  def rooms_sorted_by_area
+    @rooms.sort { |room1, room2| room1.area <=> room2.area }
+  end
+
 end
