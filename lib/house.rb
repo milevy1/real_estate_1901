@@ -19,4 +19,16 @@ class House
     @rooms.reduce(0) { |x, room| x + room.area }
   end
 
+  def price_per_square_foot
+    (@price.to_f / area).round(2)
+  end
+
+  def rooms_sorted_by_area
+    @rooms.sort { |room1, room2| room1.area <=> room2.area }
+  end
+
+  def rooms_by_category
+    @rooms.group_by { |room| room.category }
+  end
+
 end
