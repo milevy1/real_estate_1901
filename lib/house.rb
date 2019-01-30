@@ -19,4 +19,8 @@ class House
     @rooms.reduce(0) { |x, room| x + room.area }
   end
 
+  def price_per_square_foot
+    (@price.to_f / area).round(2)
+  end
+
 end
